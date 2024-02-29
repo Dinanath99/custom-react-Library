@@ -1,19 +1,23 @@
-function customRender(reactElement, container) {
-  const domElement = document.createElement(reactElement.type);
-  domElement.innerHTML = reactElement.children;
+function customRender(customElement, container) {
+  /*
+ 
+ const domElement = document.createElement(customElement.type);
+  domElement.innerHTML = customElement.children;
+  domElement.setAttribute("href", customElement.props.href);
+  domElement.setAttribute("target", customElement.props.target);
 
-  domElement.setAttribute("href", reactElement.props.href);
-  domElement.setAttribute("target", reactElement.props.target);
   container.appendChild(domElement);
+
+  */
 }
-const reactElement = {
+const customElement = {
   type: "a",
   props: {
-    href: "https://dinanath.com.np",
+    href: "https://www.google.com",
     target: "_blank",
   },
-  children: "Click me to visit mywebsite",
+  children: "Click here to visit google",
 };
 const mainContainer = document.querySelector("#root");
 
-customRender(reactElement, mainContainer);
+customRender(customElement, mainContainer);
